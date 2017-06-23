@@ -1,0 +1,64 @@
+<import src="../Tpl_hasMore/Tpl_hasMore"/>
+<template name="blockList">
+    <!--<view class="clearfix">-->
+		<view class="rel blockList "  style="background:url({{item.image ||item.thumbnail}}) no-repeat;background-size:cover;width:{{imgWidth*3/2}}px;height:250rpx;" wx:for="{{items}}" wx:key="item" data-aid="{{item.id}}" data-path="{{item.path}}" bindtap="navigateToDetail">
+			<!--<image src="{{item.image ||item.thumbnail}}" mode="widthFix" style="width:100%"></image>-->
+			<view class="list_cover" hover-class="view-hover-block">
+				<view class="list_cover-text" >{{item.text||item.title}}</view>
+			</view>
+			<!--收藏列表取消收藏-->
+			<view class="btn-close" wx:if="{{isColList}}" catchtap="setColOrUnCol" data-id="{{item.id}}">
+				<image src="../../../assets/images/icon-close.png" style="width:45rpx;height:45rpx;"></image>
+			</view>
+		</view>
+		
+    <!--</view>-->
+</template>
+
+<template name="flexImgs">
+	<view class=" rel">
+		<view class="flex-wrap">
+			<view class="{{images.length>4?'flex-image-nomar':(images.length==1?'nomar':'flex-image')}}" wx:for="{{ images }}" wx:key="" wx:for-index="image_index" wx:for-item="image">
+				<view wx:if="{{images.length >= 2}}" data-ablum="{{ablumType}}" data-pindex="{{ item_index }}" data-index="{{ image_index }}" catchtap="previewImage" background-position="center center"  style="background-image:url({{ image.src }});height:{{imgWidth}}px; width: {{imgWidth}}px;background-size: cover; background-repeat: no-repeat;">
+				</view>
+				<!--<view wx:if="{{images.length >4}}" data-ablum="{{ablumType}}" data-pindex="{{ item_index }}" data-index="{{ image_index }}" catchtap="previewImage" background-position="center center"  style="background-image:url({{ image.src }});height:{{imgWidth}}px; width: {{imgWidth}}px;background-size: cover; background-repeat: no-repeat;">
+				</view>-->
+				<!--<view wx:if="{{images.length ==2}}" data-ablum="{{ablumType}}" data-pindex="{{ item_index }}"
+				      data-index="{{ image_index }}" catchtap="previewImage" background-position="center center"
+				      style="background-image:url({{ image.src }});height:{{imgWidth*3/2}}px; width: {{imgWidth*3/2}}px;background-size: cover; background-repeat: no-repeat;">
+				
+				</view>-->
+				<view wx:if="{{images.length == 1}}" data-ablum="{{ablumType}}" data-pindex="{{ item_index }}"
+				      data-index="{{ image_index }}" catchtap="previewImage" background-position="center center"
+				      style="background-image:url({{ image.src }});height:{{imgWidth}}px; width: {{imgWidth}}px;background-size: cover; background-repeat: no-repeat;">
+				
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<template name="infoList">
+	<view class="weui-cells weui-cells_after-title">
+		<view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{items}}" wx:key="item"
+		      bindtap="navigateToArticalDetail" data-aid="{{item.id}}">
+			<view class="weui-cell__bd">{{item.title}}</view>
+			<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+		</view>
+	</view>
+	<template is="hasMore" data="{{hasMore}}"></template>
+</template>
+
+<template name="listWithImgs">
+	<view class="weui-cells_after-title newCells">
+		
+		<view class="weui-cell" wx:for="{{items}}" wx:key="item" data-aid="{{item.id}}" bindtap="navigateToArticalDetail">
+			<view class="weui-cell__hd newCells_img">
+				<image src="{{item.thumbnail||'../../assets/images/icon-xiao.jpg'}}"  />
+			</view>
+			<view class="weui-cell__bd">
+				<view>{{item.title}}</view>
+			</view>
+		</view>
+	</view>
+</template>

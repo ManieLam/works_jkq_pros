@@ -1,0 +1,20 @@
+/**app.wxss**/
+
+
+/*.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} */
+
+@import 'assets/styles/weui.wxss';
+@import 'assets/styles/flexBox.wxss';
+@import 'assets/styles/main.wxss';
+@import "pages/template/index.wxss";
+@import 'assets/styles/icons.wxss';
+
+/*@import 'pages/helpers/wxParse/wxParse.wxss';*/

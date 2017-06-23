@@ -1,0 +1,5 @@
+/* pages/home/searchResult/index.wxss */
+
+.line-height_2 {
+    line-height: 2;
+}

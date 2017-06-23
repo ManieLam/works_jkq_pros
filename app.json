@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/home/index/index",
+        "pages/category/index/index",
+        "pages/collect/index/index",
+        "pages/home/detail/index",
+
+        "pages/home/searchResult/index",
+        "pages/noAuth/index"
+
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "食物保健养身",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#898989",
+        "selectedColor": "#09bb07",
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "list": [{
+            "pagePath": "pages/home/index/index",
+            "text": "首页",
+            "iconPath": "assets/images/tab-home.png",
+            "selectedIconPath": "assets/images/tab-home-active.png"
+        }, {
+            "pagePath": "pages/category/index/index",
+            "text": "分类",
+            "iconPath": "assets/images/tab-catogary.png",
+            "selectedIconPath": "assets/images/tab-catogary-active.png"
+        }, {
+            "pagePath": "pages/collect/index/index",
+            "text": "收藏",
+            "iconPath": "assets/images/icon-start.png",
+            "selectedIconPath": "assets/images/icon-start-active.png"
+        }]
+    }
+}

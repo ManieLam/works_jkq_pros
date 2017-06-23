@@ -1,0 +1,21 @@
+<!--pages/home/index/index.wxml-->
+<import src="../../template/Tpl_header/Tpl_header.wxml" />
+<import src="../../template/Tpl_searchBox.wxml" />
+<import src="../../template/Tpl_list/Tpl_list.wxml" />
+
+
+<view class="container">
+        <template is="scrollHeader" data="{{ ...initHeader}}"></template>
+	<template is="searchBox" data="{{...initSearch,searchValue}}"></template>
+    <view class="section flex_1  ">
+        <view class="section_header">
+            热门搜索
+        </view>
+        <view class="section_body list-box clearfix">
+            <!--<view class="blockList">-->
+                <template is="blockList" data="{{...blockData,imgWidth}}"></template>
+            <!--</view>-->
+        </view>
+        
+    </view>
+</view>

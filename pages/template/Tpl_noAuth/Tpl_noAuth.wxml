@@ -1,0 +1,13 @@
+<template name="hasNoAuth">
+    <view class="sectionBox">
+        <view class="bgfff boxBody">
+            <view class="boxInfo">未授权用户信息</view>
+            <view class="boxContent">
+                <view >解决方案</view>
+                <view >1.在小程序列表页，拇指按住「{{appName}}」，向左滑动删除。搜索「{{appName}}」 并重新进入进行授权。</view>
+                <view >2.在「{{appName}}」内，点击右上角的「…」，在出现列表选项中，点击关于「{{appName}}」 ，在跳转后的页面 ，点击右上角的「…」 ，在出现的列表选项中，点击「设置」后进行授权。</view>
+            </view>
+        </view>
+        <button type="primary" bindtap="reload" style="margin:0 15px">重新加载</button>
+    </view>
+</template>

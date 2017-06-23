@@ -1,0 +1,49 @@
+@import "../../helpers/wxParse/wxParse.wxss";
+.detail_header {
+    height: 500rpx;
+}
+
+.detail_header .himgs {
+    width: 100%;
+    height: 100%;
+}
+
+.detail_section {
+    background: #fff;
+    /*height: 100%;*/
+    /*line-height: 1.4*/
+}
+
+.header_col {
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+    color: #fff;
+}
+
+.header_cover {
+    background-color: rgba(0, 0, 0, .2);
+    position: absoule;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.artical_item {
+    flex-direction: column;
+    font-size: 17px;
+    font-weight: 500;
+    /*padding: 20rpx 10rpx;*/
+    background-color: #fff;
+    line-height: 2;
+    padding: 0 10px;
+}
+
+.artical_item_detail {
+    font-weight: 300;
+}
+
+.wxParse-strong {
+    font-weight: 600;
+}

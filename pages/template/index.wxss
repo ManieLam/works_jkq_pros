@@ -1,0 +1,80 @@
+@import "Tpl_hasMore/Tpl_hasMore.wxss";
+@import "Tpl_header/Tpl_header.wxss";
+@import "Tpl_list/Tpl_list.wxss";
+@import "Tpl_twoColumnList/Tpl_twoColumnList.wxss";
+@import "Tpl_noAuth/Tpl_noAuth.wxss";
+
+/*图标*/
+
+.icons {
+    width: 35rpx;
+    height: 35rpx;
+    min-width: 35rpx;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.icons_mini {
+    width: 25rpx;
+    height: 25rpx;
+    min-width: 25rpx;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.btn-close {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+
+/*分界线*/
+
+.dividing-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /*padding-bottom:20px;*/
+    line-height: 100rpx;
+    font-size: 17px;
+}
+
+.dividing-line::before,
+.dividing-line::after {
+    content: "";
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    width: 35%;
+    height: 1px;
+    background-color: #eee;
+    /*top:25%;*/
+    bottom: 45%;
+}
+
+.dividing-line::before {
+    left: 2%;
+}
+
+.dividing-line::after {
+    right: 2%;
+}
+
+
+/*wxParse*/
+
+.wxParse-p {
+    /*margin: 10rpx 20rpx;*/
+    overflow: hidden;
+    /*line-height: 2.2;*/
+}
+
+.wxParse-p:not(:first-child) {
+    margin: 20rpx 0;
+}
+
+.wxParse-li-text {
+    padding-left: 10rpx;
+}

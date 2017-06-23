@@ -1,0 +1,11 @@
+<!-- pages/collect/index/index.wxml -->
+<import src="../../template/Tpl_list/Tpl_list.wxml"  />
+<import src="../../template/Tpl_hasMore/Tpl_hasMore.wxml"  />
+<view class="container">
+        <view class="section_body list-box">
+                <template is="blockList" data="{{...colData,imgWidth,isColList}}"></template>
+        </view>
+        <view>
+                <template is="hasMore" data="{{...hasMore}}"></template>
+        </view>
+</view>

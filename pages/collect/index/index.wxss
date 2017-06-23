@@ -1,0 +1,6 @@
+/* pages/collect/index/index.wxss */
+
+.section {
+    background: #fff;
+    padding: 30rpx 0;
+}

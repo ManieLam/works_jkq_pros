@@ -1,0 +1,27 @@
+<import  src="Tpl_hasMore/Tpl_hasMore.wxml"/>
+
+<template name="twoColumnList">
+  <scroll-view class="left" scroll-y="true">
+  <!--左栏-->
+    <view wx:for="{{leftData}}" wx:for-item="items" class="leftview {{items.id==linheightId?'clickview':''}}" id="{{items.id}}" bindtap="clickbtn">
+    {{items.name}}
+    <view class="triangle_tLeft" wx:if="{{items.id==linheightId}}"></view>
+    </view>
+    
+  </scroll-view>
+  <!--<scroll-view class="right" scroll-y="true"  bindscrolltolower="lowerMore"  bindscrolltoupper="loadNewst" enable-back-to-top="true" scroll-into-view="{{intoid}}" bindscroll="{{scroll}}">
+    <view >
+      <view class="rightview" wx:for="{{rightData}}" wx:for-item="menu" wx:key="menu" hover-class="view-hover-list" data-aid="{{menu.id}}" bindtap="navigateToDetail">
+      {{menu.title}}
+      </view>
+    </view>
+  </scroll-view>-->
+  <!--右栏 -->
+  
+  <view class="right">
+      <view class="rightview" wx:for="{{rightData}}" wx:for-item="menu" wx:key="menu" hover-class="view-hover-list" data-aid="{{menu.id}}" bindtap="navigateToDetail">
+      {{menu.title}}
+       <!--<template is="hasMore" data="{{hasMore}}"></template>-->
+      </view>
+  </view>
+</template>

@@ -1,0 +1,67 @@
+.leftview {
+    height: 120rpx;
+    line-height: 120rpx;
+    background: #80c269;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.leftview:not(:last-child) {
+    border-bottom: 1rpx solid #fff;
+}
+
+.rightview {
+    height: 120rpx;
+    line-height: 120rpx;
+    border-left: none !important;
+    margin: 0 10px;
+    /*border-bottom: 1rpx dashed #b2b2b2;*/
+}
+
+.rightview:not(:last-child) {
+    border-bottom: 1rpx dashed #b2b2b2;
+}
+
+.clickview {
+    border-right: none !important;
+    background-color: #b2b2b2;
+    color: white;
+}
+
+.left,
+.right {
+    height: 100vh
+}
+
+
+/*.right {
+    height: 100vh;
+}*/
+
+.left {
+    position: fixed;
+    width: 110px;
+    /*flex: 1;*/
+    background-color: whitesmoke;
+}
+
+.right {
+    flex: 2;
+    margin-left: 110px;
+}
+
+
+/*小三角*/
+
+.triangle_tLeft {
+    width: 0;
+    height: 0;
+    border-right: 10px solid rgba(255, 255, 255, .8);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+}

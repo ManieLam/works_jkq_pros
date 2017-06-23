@@ -1,0 +1,7 @@
+<!--pages/category/index/index.wxml-->
+<import  src="../../template/Tpl_twoColumnList/Tpl_twoColumnList.wxml"/>
+<view class="container">
+    <view class="flex">
+        <template is="twoColumnList" data="{{leftData:leftData,rightData:rightData_items,linheightId:linheightId}}"></template>
+    </view>
+</view>

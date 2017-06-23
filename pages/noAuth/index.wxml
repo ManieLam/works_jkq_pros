@@ -1,0 +1,6 @@
+<!--pages/noAuth/index.wxml-->
+<import src="../template/Tpl_noAuth/Tpl_noAuth.wxml"  />
+
+<view  class="container">
+    <template is="hasNoAuth" data="{{appName:appName}}"></template>
+</view>

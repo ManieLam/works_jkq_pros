@@ -1,0 +1,20 @@
+<template name="searchBox">
+	<view class="weui-search-bar  ">
+	    <view class="weui-search-bar__form">
+	        <view class="weui-search-bar__box"  >
+	            <icon class="weui-icon-search_in-box"  type="search" size="14"/>
+	            <input type="{{inputType}}" confirm-type="search" class="weui-search-bar__input"  value="{{searchValue}}" focus="{{searchInputShowed}}"  placeholder="{{placeholder}}"  bindinput="handleInput" bindconfirm="getSearchList"/>
+	            <view class="weui-icon-clear" wx:if="{{searchValue.length > 0}}" bindtap="clearInput">
+	                <icon type="clear" size="14"></icon>
+	            </view>
+	        </view>
+
+	        <label class="weui-search-bar__label searchIcon" hidden="{{searchInputShowed}}"  bindtap="showInput">
+				<icon class="weui-icon-search" type="search" size="14" ></icon>
+	            <text class="weui-search-bar__text">{{placeholder}}</text>
+	        </label>
+	    </view>
+	     <view class="weui-search-bar__cancel-btn" hidden="{{!searchInputShowed}}" bindtap="showInput">取消</view> 
+	    <view class="weui-search-bar__cancel-btn" hidden="{{!searchInputShowed}}"  bindtap="getSearchList">搜索</view>
+	</view>
+</template>

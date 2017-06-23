@@ -1,0 +1,12 @@
+<!--pages/home/searchResult/index.wxml-->
+ <import src="../../template/Tpl_list/Tpl_list.wxml" />
+ <view class="line-height_2">
+    <view class="weui-cells__title" >{{pageTips}}</view>
+
+    <template is="infoList" data="{{...resultList,hasMore}}"></template>
+</view>
+<!--<import src="../../template/Tpl_detail/Tpl_detail.wxml"  />
+<view class="container">
+    <template is="detail" data="{{...resultList,is_faved}}"></template>
+</view>-->
+

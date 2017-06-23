@@ -1,0 +1,25 @@
+<!-- pages/home/detail/index.wxml -->
+<import src="../../helpers/wxParse/wxParse.wxml"  />
+<view class="container">
+    <view class="detail_header">
+        <view style="background:url('{{detailData.thumbnail}}') no-repeat;background-size:100% 100%;background-position:center "
+              class=" himgs rel">
+            <view class="header_cover"></view>
+            <view class="header_col flex" bindtap="setColOrUnCol" data-id="{{detailData.id}}" style="z-index:99">
+                {{is_faved?'已收藏':'我要收藏'}}
+                <view class="icons {{is_faved?'icon-col-active':'icon-col'}}" >
+            </view>
+        </view>
+    </view>
+</view>
+<view class="flex artical_item">
+    <view class="artical_item_detail">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" ></template>
+    </view>
+</view>
+
+
+
+
+</view>
+

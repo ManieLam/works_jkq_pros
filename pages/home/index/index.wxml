@@ -5,13 +5,13 @@
 
 
 <view class="container">
-        <template is="scrollHeader" data="{{ ...initHeader}}"></template>
+    <template is="scrollHeader" data="{{ ...initHeader}}"></template>
 	<template is="searchBox" data="{{...initSearch,searchValue}}"></template>
-    <view class="section flex_1  ">
-        <view class="section_header">
+    <view class="section flex_2  flex flex-cloumn">
+        <view class="section_header flex flex-center">
             热门搜索
         </view>
-        <view class="section_body list-box clearfix">
+        <view class="section_body list-box clearfix flex_2">
             <!--<view class="blockList">-->
                 <template is="blockList" data="{{...blockData,imgWidth}}"></template>
             <!--</view>-->

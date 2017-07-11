@@ -16,7 +16,7 @@
 
 .section {
     background: #fff;
-    padding: 15rpx 0;
+    padding: 30rpx 0;
 }
 
 .section_header {

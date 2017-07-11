@@ -76,7 +76,7 @@ Page({
                 res.image = res.image ? res.image + "?imageView2/2/h/125" : ''
             })
             sliders.map(res => {
-                res.image = res.image ? res.image + "?imageView2/2/h/450" : '';
+                res.image = res.image ? res.image + "?imageView2/2/h/400" : '';
                 let split = res.path ? res.path.split('?')[1].split('&') : '';
                 if (split.length) {
                     res.openType = split[0].split('=')[1];

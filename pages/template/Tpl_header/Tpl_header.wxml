@@ -6,12 +6,14 @@
 </template>
 
 <template name="scrollHeader">
-	 <!--头部滚动图  data="{{imgUrls,indicatorDots,autoplay,interval,duration, }}" height={{height}}px;max-height:300px;-->
-	<swiper  class="flex_1" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="max-height:242px;min-height:150px;">
-		<block wx:for="{{imgUrls}}" wx:key="item">
-			<swiper-item>
-			    <navigator url="{{item.path}}" open-type="{{item.openType ||navigate}}" style="background:url('{{item.image}}')no-repeat;background-size:cover;background-position:center;height:100%" ></navigator>
-			</swiper-item>
-		</block>
-	</swiper>
+	 <!--头部滚动图  data="{{imgUrls,indicatorDots,autoplay,interval,duration, }}" height={{height}}px;max-height:300px;   style="height:100%;height:{{height}}rpx"-->
+	<view class="" style="height:{{height}}rpx">
+		<swiper  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:100%">
+			<block wx:for="{{imgUrls}}" wx:key="item">
+				<swiper-item>
+					<navigator url="{{item.path}}" open-type="{{item.openType ||navigate}}" style="background:url('{{item.image}}')no-repeat;background-size:cover;background-position:center;height:100%" ></navigator>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
 </template>
